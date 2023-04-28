@@ -1,0 +1,32 @@
+@media (max-width: 1000px) {
+    nav{
+        overflow: hidden;
+    }
+    nav .nav-top h1,
+    nav .nav-bottom ul li p:last-child,
+    nav .nav-middle ul li p:last-child {
+        opacity: 0;
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        -ms-transition: .3s linear;
+        -o-transition: .3s linear;
+    }
+    .main-content .overview .overview-header {
+        padding: 5px;
+    }
+    .main-content .overview .overview-header .overview-buttons{
+        width: 150px;
+    }
+    .main-content .overview .overview-header h1{
+        font-size: 30px !important;
+    }
+}
+@media (max-width: 550px) {
+    .main-content .overview .overview-header h1{
+        font-size: 25px !important;
+    }
+    .main-content .overview .overview-content{
+        width: 100%;
+    }
+}

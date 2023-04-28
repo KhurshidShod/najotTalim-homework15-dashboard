@@ -1,0 +1,170 @@
+nav{
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: rgba(54, 55, 64, 1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+body.dark nav{
+    border-right: 1px solid rgba(221, 226, 255, 1);
+}
+body.close nav ul li:hover p:last-child{
+    opacity: 1 !important;
+    z-index: 9;
+    visibility: visible !important;
+    color: rgba(221, 226, 255, 1) !important;
+}
+body.close nav ul li:hover {
+    width: 160px !important;
+    background-color: rgba(54, 55, 64, 1);
+    z-index: 9;
+    position: relative;
+}
+body.close nav ul li:hover body.close nav{
+    overflow: visible !important;
+}
+body.close nav .nav-top h1,
+body.close nav .nav-bottom ul li p:last-child,
+body.close nav .nav-middle ul li p:last-child {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s linear;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+body.open nav{
+    width: 250px;
+}
+body.open nav ul li{
+    width: 250px !important;
+}
+body.open nav ul li:hover p:last-child{
+    opacity: 1 !important;
+    z-index: 9 !important;
+    color: rgba(221, 226, 255, 1) !important;
+}
+body.open nav .sideNav-top .nav-middle ul li p:last-child{
+    color: rgba(164, 166, 179, 1) !important;
+}
+body.open nav .nav-top h1, 
+body.open nav .nav-bottom ul li p:last-child, 
+body.open nav .nav-middle ul li p:last-child {
+    opacity: 1;
+}
+body.open nav div ul li:hover p:first-child{
+    color: rgba(221, 226, 255, 1);
+}
+body.open nav .sideNav-top .nav-middle ul li.navActive{
+    background-color: rgb(91, 92, 108);
+    border-left: 4px solid #DDE2FF;
+}
+body.open nav .sideNav-top .nav-middle ul li.navActive p:last-child{
+    color: rgba(221, 226, 255, 1) !important;
+}
+nav .sideNav-top{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+nav .sideNav-top .nav-top{
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: var(--nav-padding);
+}
+nav .sideNav-top .nav-top h1 a{
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    margin-left: 1rem;
+    color: rgba(164, 166, 179, 1);
+}
+nav .sideNav-top .nav-top img{
+    max-width: 50px;
+    height: 50px;
+}
+.nav-top,
+.nav-middle,
+.nav-bottom {
+    width: 100%;
+}
+.nav-bottom {
+    margin-bottom: 1rem;
+}
+nav div div{
+    width: 100%;
+}
+nav div div div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100% !important;
+}
+nav div ul li p:last-child{
+    margin-left: 1rem;
+}
+nav div ul li p:first-child{
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav div ul li p:first-child i{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+nav div ul li:nth-child(1),
+nav div ul li:nth-child(2){
+    cursor: pointer;
+}
+nav div ul li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+    padding-left: var(--nav-padding);
+    cursor: not-allowed;
+}
+nav div div ul li.navActive{
+    background-color: rgb(91, 92, 108);
+    border-left: 4px solid #DDE2FF;
+}
+nav div div ul li.navActive p:last-child{
+    color: rgba(221, 226, 255, 1) !important;
+}
+nav div ul li p:last-child
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(164, 166, 179, 1);
+}
+nav div ul li p:first-child{
+    color: rgba(159, 162, 180, 1);
+}
+nav div ul li:hover p:first-child{
+    color: rgba(221, 226, 255, 1);
+    /* background-color: rgb(91, 92, 108); */
+    /* border-left: 4px solid #DDE2FF; */
+}
